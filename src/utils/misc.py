@@ -5,6 +5,8 @@ import time
 import torch
 import random
 import requests
+from pathlib import Path
+import os
 
 
 def load_features(params):
@@ -200,23 +202,14 @@ def download_file_from_google_drive(id, destination):
 
 
 def get_features():
-    file_ids = ['xxx',
-                'xxx',
-                'xxx',
-                'xxx']
+    files = {'mini_densenet_best_test.pickle': '1NRGWWPBfwHNyTezg9EbXwmvUfHVon5Ww',
+             'mini_densenet_best_val.pickle': '1zkolQ1WG3-_jC1hghyivs_vxNjSVGrQp',
+             'tiered_densenet_best_test.pickle': '1pVwWe67oOb-y6HCSrBRIGU7BgSjrzFDx',
+             'tiered_densenet_best_val.pickle': '1pFi5dMqzEj28DX3BqiWjTAGsaFpZZYue'}
 
-    file_names = ['mini_densenet_best_test.pickle',
-                  'mini_densenet_best_val.pickle',
-                  'tiered_densenet_best_test.pickle',
-                  'tiered_densenet_best_val.pickle']
-
-    assert False, '\n\n***The link was deleted due to the ECCV policy of not attaching links, ' \
-                  'it will be reinstated upon acceptance of the paper***\n\n'
-    from pathlib import Path
-    import os
     Path("features").mkdir(parents=True, exist_ok=True)
 
-    for file_id, file_name in zip(file_ids, file_names):
+    for file_name, file_id in files.items():
         file_path = os.path.join("features", file_name)
         if not Path(file_path).is_file():
             download_file_from_google_drive(file_id, file_path)
