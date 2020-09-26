@@ -3,7 +3,8 @@ Task-Adaptive Feature Sub-Space Learning for few-shot classification
 
 https://arxiv.org/abs/2003.06670
 
-# Code for the experiments (according to tables and figures in the paper):
+# Code for the experiments 
+## (according to tables and figures in the paper):
 
 ## Table 1: Transductive setting
 python exp\_table.py
