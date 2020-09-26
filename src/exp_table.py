@@ -1,3 +1,9 @@
+# --------------------------------------------------------
+# TAFSSL
+# Copyright (c) 2019 IBM Corp
+# Licensed under The Apache-2.0 License [see LICENSE for details]
+# --------------------------------------------------------
+
 import numpy as np
 from utils.proto_msp import ProtoMSP
 import time
