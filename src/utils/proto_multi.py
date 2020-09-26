@@ -1,3 +1,9 @@
+# --------------------------------------------------------
+# TAFSSL
+# Copyright (c) 2019 IBM Corp
+# Licensed under The Apache-2.0 License [see LICENSE for details]
+# --------------------------------------------------------
+
 from utils.proto import ProtoNet
 from sklearn.cluster import KMeans
 import numpy as np
